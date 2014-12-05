@@ -3,7 +3,11 @@
     <CLASSES>
       <root url="jar://E:/IntellijPlugin/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/" />
     </CLASSES>
-    <JAVADOC />
-    <SOURCES />
+    <JAVADOC>
+      <root url="jar://E:/IntellijPlugin/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/IntellijPlugin/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
