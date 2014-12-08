@@ -20,7 +20,7 @@ public class yikahui_main {
     final static String test_user = "2014120300000133";
     final static String test_key = "123456";
     final static String test_sign = util.md5Enc(test_user + test_key, false);
-    final static String yue_test_url = "http://122.224.157.57:5003/api_game/userBanlance";
+    final static String yue_test_url = "http://testapi.ekhui.com:5003/api_game/userBanlance";
     final static String yue_test_param = "userNo=" + test_user + "&sign=" + test_sign;
 
     public static void main(String[] args) {
