@@ -24,8 +24,8 @@ public class yikahui_main {
     final static String yue_test_param = "userNo=" + test_user + "&sign=" + test_sign;
 
     public static void main(String[] args) {
-        String back_xml = sendP.sendPost(yue_test_url, yue_test_param, charset);
-        System.out.println(back_xml);
+        String back_xml = sendP.sendPost(yue_url, yue_param, charset);
+//        System.out.println(back_xml);
         Map<String, Object> dingd_result = util.xmlR_dom4j(back_xml);
         System.out.println("------------------------------以下为查询余额显示------------------------------");
         System.out.println(dingd_result.get("resMsg.1"));
