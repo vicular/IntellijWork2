@@ -1,5 +1,7 @@
 package Main;
 
+import service.mail;
+
 public class Main {
     public static boolean equalsIgnoreCase(String str1, String str2) {
         return str1.toUpperCase().equals(str2.toUpperCase());
@@ -45,6 +47,16 @@ public class Main {
             e.printStackTrace();
         }*/
 
+        String smtp = "smtp.exmail.qq.com";
+        String from = "linningning@golandit.com";
+        String to = "linningning@golandit.com";
+        String copyto = "linningning@golandit.com";
+        String subject = "邮件主题";
+        String content = "邮件内容";
+        String username="linningning@golandit.com";
+        String password="";
+        String filename = "C:\\Users\\Administrator\\Downloads\\test.txt";
+        mail.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);
 
     }
 }
