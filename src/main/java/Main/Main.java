@@ -1,5 +1,11 @@
 package Main;
 
+import com.alibaba.citrus.service.mail.builder.MailAddressType;
+import com.alibaba.citrus.service.mail.builder.MailBuilder;
+import com.alibaba.citrus.service.mail.builder.content.TextTemplateContent;
+import com.alibaba.citrus.service.mail.impl.MailBuilderFactory;
+import com.alibaba.citrus.service.mail.session.MailTransport;
+import com.alibaba.fastjson.JSON;
 import service.mail;
 
 public class Main {
@@ -7,8 +13,8 @@ public class Main {
         return str1.toUpperCase().equals(str2.toUpperCase());
     }
 
-    public static void main(String[] args) {
-        String str = "<?xml version=\"1.0\" encoding=\"gb2312\" ?><items><item name=\"resultno\" value=\"0007\" /><item name=\"retmsg\" value=\"没有采购此类商品\" /></items>";
+    public static void main(String[] args) throws Exception {
+//        String str = "<?xml version=\"1.0\" encoding=\"gb2312\" ?><items><item name=\"resultno\" value=\"0007\" /><item name=\"retmsg\" value=\"没有采购此类商品\" /></items>";
         /*String regex = ".+resultno.{9}(\\d+)\".+retmsg.{9}(.+)\".+";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
@@ -47,16 +53,32 @@ public class Main {
             e.printStackTrace();
         }*/
 
-        String smtp = "smtp.exmail.qq.com";
+        /*String smtp = "smtp.exmail.qq.com";
         String from = "linningning@golandit.com";
-        String to = "linningning@golandit.com";
+        String to = "linningning@golandit.com,lanhoo123@163.com";
         String copyto = "linningning@golandit.com";
         String subject = "邮件主题";
         String content = "邮件内容";
         String username="linningning@golandit.com";
         String password="";
         String filename = "C:\\Users\\Administrator\\Downloads\\test.txt";
-        mail.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);
+        mail.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);*/
+
+        /*MailBuilderFactory mailBuilderFactory = new MailBuilderFactory();
+
+        mailBuilderFactory.setSubject("邮件主题");
+        TextTemplateContent textTemplateContent = new TextTemplateContent("余额通知");
+        mailBuilderFactory.setContent(textTemplateContent);
+
+        MailBuilder mail = (MailBuilder) mailBuilderFactory.getObject();
+        mail.setAddress(MailAddressType.TO, "linningning@golandit.com");
+        mail.setAddress(MailAddressType.FROM,"linningning@golandit.com");
+        MailTransport mailTransport = mail.getMailService().getMailTransport();
+        mailTransport.connect();
+        mailTransport.send(mail);
+        mailTransport.close();*/
+
+        System.out.println(JSON.parseObject("{\"balance\":\"21887.293\",\"interval\":\"1\",\"unit\":\"M\",\"count\":\"5\"}").getString("unit").charAt(0));
 
     }
 }
