@@ -58,6 +58,5 @@ public class Main {
         String filename = "C:\\Users\\Administrator\\Downloads\\test.txt";
         mail.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);*/
 
-
     }
 }
