@@ -58,19 +58,5 @@ public class Main {
         String filename = "C:\\Users\\Administrator\\Downloads\\test.txt";
         mail.sendAndCc(smtp, from, to, copyto, subject, content, username, password, filename);*/
 
-        /*MailBuilderFactory mailBuilderFactory = new MailBuilderFactory();
-
-        mailBuilderFactory.setSubject("邮件主题");
-        TextTemplateContent textTemplateContent = new TextTemplateContent("余额通知");
-        mailBuilderFactory.setContent(textTemplateContent);
-
-        MailBuilder mail = (MailBuilder) mailBuilderFactory.getObject();
-        mail.setAddress(MailAddressType.TO, "linningning@golandit.com");
-        mail.setAddress(MailAddressType.FROM,"linningning@golandit.com");
-        MailTransport mailTransport = mail.getMailService().getMailTransport();
-        mailTransport.connect();
-        mailTransport.send(mail);
-        mailTransport.close();*/
-
     }
 }
