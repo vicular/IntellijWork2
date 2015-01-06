@@ -1,11 +1,5 @@
 package Main;
 
-import com.alibaba.citrus.service.mail.builder.MailAddressType;
-import com.alibaba.citrus.service.mail.builder.MailBuilder;
-import com.alibaba.citrus.service.mail.builder.content.TextTemplateContent;
-import com.alibaba.citrus.service.mail.impl.MailBuilderFactory;
-import com.alibaba.citrus.service.mail.session.MailTransport;
-import com.alibaba.fastjson.JSON;
 import service.mail;
 
 public class Main {
@@ -78,7 +72,6 @@ public class Main {
         mailTransport.send(mail);
         mailTransport.close();*/
 
-        System.out.println(JSON.parseObject("{\"balance\":\"21887.293\",\"interval\":\"1\",\"unit\":\"M\",\"count\":\"5\"}").getString("unit").charAt(0));
 
     }
 }
