@@ -170,6 +170,7 @@ public class mail {
             mimeMsg.setRecipients(Message.RecipientType.TO,InternetAddress.parse(to));
             return true;
         } catch(Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
