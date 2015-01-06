@@ -72,6 +72,5 @@ public class Main {
         mailTransport.send(mail);
         mailTransport.close();*/
 
-
     }
 }
